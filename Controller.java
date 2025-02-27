@@ -53,11 +53,11 @@ public class Controller {
 
                 if (!output.isEmpty()) {
                     JSONObject obj = new JSONObject(output);
-                    temp_info.setText("Температура: " + obj.getJSONObject("main").getDouble("temp"));
-                    temp_feels.setText("Ощущается: " + obj.getJSONObject("main").getDouble("feels_like"));
-                    temp_max.setText("Максимум: " + obj.getJSONObject("main").getDouble("temp_max"));
-                    temp_min.setText("Минимум: " + obj.getJSONObject("main").getDouble("temp_min"));
-                    pressure.setText("Давление: " + obj.getJSONObject("main").getDouble("pressure"));
+                    temp_info.setText("Temperature: " + obj.getJSONObject("main").getDouble("temp"));
+                    temp_feels.setText("Feels like: " + obj.getJSONObject("main").getDouble("feels_like"));
+                    temp_max.setText("Max: " + obj.getJSONObject("main").getDouble("temp_max"));
+                    temp_min.setText("Min: " + obj.getJSONObject("main").getDouble("temp_min"));
+                    pressure.setText("Pressure: " + obj.getJSONObject("main").getDouble("pressure"));
                 }
             }
         });
@@ -77,7 +77,7 @@ public class Controller {
             }
             bufferedReader.close();
         } catch(Exception e) {
-            System.out.println("Чёт я такого города не нашёл");
+            System.out.println("I can't find it :(");
         }
         return content.toString();
     }
