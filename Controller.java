@@ -49,7 +49,7 @@ public class Controller {
 
             if(!getUserCity.equals("")) {
 
-                String output = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=d29a1734fae877911bb6f2fabc797c5d&units=metric");
+                String output = getUrlContent("https://api.openweathermap.org/data/2.5/weather?q=" + getUserCity + "&appid=API&units=metric");
 
                 if (!output.isEmpty()) {
                     JSONObject obj = new JSONObject(output);
